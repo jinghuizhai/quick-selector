@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta charset="utf-8">
+		<title>quick-selector test</title>
+		<link rel="stylesheet" type="text/css" href="index.css" />
+		<script type="text/javascript" src="zjhlib-1.0.js"></script>
+	</head>
+	<body>
+		<div id="test">
+			I am test
+		</div>
+		<ul id="ul">
+			<li>this is li-1</li>
+			<li>this is li-2</li>
+			<li>this is li-3</li>
+			<li>this is li-4</li>
+		</ul>
+		<img src="http://www.google.com/x.jpg" />
+		<a id="haha" class="male">haha</a>
+		<script type="text/javascript">
+			// var test = z.get('test');
+			// console.log(test);
+			// console.log(z.browser());
+			// var ul = z.get('ul');
+			// var li = z.nth(ul,0);
+			// console.log(li);
+			// console.log(z.browser());
+			z.ready(function(){
+				var ele = z.get('haha');
+				var color = z.css(ele,'color');
+				console.log(color);
+			});
+			z.ready(function(){
+				var ul = z.get('ul');
+				var fn = function(){
+					alert(1);
+				}
+				z.addEvent(ul,'click',fn);
+				z.removeEvent(ul,'click',fn);
+				console.log(z.html(ul));
+			});
+
+			for(x in z){
+				console.log("<li>"+x+"</li>");
+			}
+			
+		</script>
+	</body>
+</html>
