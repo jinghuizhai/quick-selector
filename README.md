@@ -59,6 +59,8 @@ a simple javascript selector like google closure
 <h2>如何使用</h2>
 var test = z.get('test');//选择了一个id为test的dom
 z.addClass(test,'red');//添加了一个名字为red的类
-z.post('http://www.google.com/test',{'a':1},function(r){
+z.post('test.php',{'a':1},function(r){
   console.log(r);
 });//ajax
+<hr>
+这个lib兼容所有的浏览器。
