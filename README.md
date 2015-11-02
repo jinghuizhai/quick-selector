@@ -63,4 +63,4 @@ z.post('test.php',{'a':1},function(r){
   console.log(r);
 });//ajax
 <hr>
-这个lib兼容所有的浏览器。
+这个lib兼容所有的浏览器，包括IE。
